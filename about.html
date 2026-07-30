@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <script>
+    (function () {
+      if (location.protocol !== "file:") {
+        return;
+      }
+      var page = decodeURIComponent(location.pathname.split("/").pop() || "index.html");
+      location.replace("http://127.0.0.1:8765/" + page);
+    })();
+  </script>
+  <title>关于我 - Ziyang Web</title>
+  <link rel="stylesheet" href="style.css?v=3">
+</head>
+<body data-page-title="page.about.title">
+  <nav class="site-nav">
+    <a class="nav-brand" href="index.html">Ziyang Web</a>
+    <div class="nav-links">
+      <a href="index.html" data-i18n="nav.home">首页</a>
+      <a href="about.html" aria-current="page" data-i18n="nav.about">关于我</a>
+      <a href="contact.html" data-i18n="nav.contact">联系我</a>
+      <button type="button" id="lang-toggle" class="lang-toggle" data-i18n="lang.toggle">English</button>
+    </div>
+  </nav>
+
+  <main class="page">
+    <h1 data-i18n="about.heading">关于我</h1>
+    <p data-i18n="about.body">你好！我正在学习做网站，希望你喜欢。</p>
+  </main>
+
+  <footer class="site-footer">
+    <p>© 2026 Ziyang Web。保留所有权利。</p>
+    <p>
+      <a href="mailto:ziyangt25@gmail.com">ziyangt25@gmail.com</a>
+    </p>
+  </footer>
+
+  <script src="translate.js?v=3"></script>
+</body>
+</html>

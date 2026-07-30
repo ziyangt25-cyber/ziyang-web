@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <script>
+    (function () {
+      if (location.protocol !== "file:") {
+        return;
+      }
+      var page = decodeURIComponent(location.pathname.split("/").pop() || "index.html");
+      location.replace("http://127.0.0.1:8765/" + page);
+    })();
+  </script>
+  <title>Ziyang Web</title>
+  <link rel="stylesheet" href="style.css?v=4">
+</head>
+<body data-page-title="page.index.title">
+  <nav class="site-nav">
+    <a class="nav-brand" href="index.html">Ziyang Web</a>
+    <div class="nav-links">
+      <a href="index.html" aria-current="page" data-i18n="nav.home">首页</a>
+      <a href="about.html" data-i18n="nav.about">关于我</a>
+      <a href="contact.html" data-i18n="nav.contact">联系我</a>
+      <button type="button" id="lang-toggle" class="lang-toggle" data-i18n="lang.toggle">English</button>
+    </div>
+  </nav>
+
+  <main class="page page--home">
+    <header class="hero">
+      <h1 data-i18n="home.hero.title">你好，欢迎来到 Ziyang Web！</h1>
+      <p data-i18n="home.hero.subtitle">这是我用 Cursor 做的第一页。下面是我的一些旅行照片展示。</p>
+    </header>
+
+    <section class="gallery" aria-labelledby="gallery-title">
+      <h2 id="gallery-title" data-i18n="home.gallery.title">我的日本之旅</h2>
+      <p class="gallery-hint" data-i18n="home.gallery.hint">点击卡片进入详情页，查看更多内容与照片。</p>
+      <div class="gallery-grid">
+        <a class="gallery-card gallery-card--link" href="tokyo.html?v=4">
+          <img class="gallery-card__cover" src="images/tokyo1.jpg" alt="东京旅行照片" data-i18n-alt="home.card.tokyo.alt">
+          <span class="gallery-card__front-text">
+            <span class="gallery-card__title" data-i18n="home.card.tokyo.title">东京</span>
+            <span class="gallery-card__tap" data-i18n="home.card.tapHint">点击进入详情页</span>
+          </span>
+        </a>
+
+        <a class="gallery-card gallery-card--link" href="kyoto.html?v=4">
+          <img class="gallery-card__cover" src="images/kyoto1.jpg" alt="京都旅行照片" data-i18n-alt="home.card.kyoto.alt">
+          <span class="gallery-card__front-text">
+            <span class="gallery-card__title" data-i18n="home.card.kyoto.title">京都</span>
+            <span class="gallery-card__tap" data-i18n="home.card.tapHint">点击进入详情页</span>
+          </span>
+        </a>
+
+        <a class="gallery-card gallery-card--link" href="osaka.html?v=4">
+          <img class="gallery-card__cover" src="images/osaka1.jpg" alt="大阪旅行照片" data-i18n-alt="home.card.osaka.alt">
+          <span class="gallery-card__front-text">
+            <span class="gallery-card__title" data-i18n="home.card.osaka.title">大阪</span>
+            <span class="gallery-card__tap" data-i18n="home.card.tapHint">点击进入详情页</span>
+          </span>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© 2026 Ziyang Web。保留所有权利。</p>
+    <p>
+      <a href="mailto:ziyangt25@gmail.com">ziyangt25@gmail.com</a>
+    </p>
+  </footer>
+
+  <script src="translate.js?v=4"></script>
+</body>
+</html>
